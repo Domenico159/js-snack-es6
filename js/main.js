@@ -142,7 +142,7 @@ const squadre2 =[];
 
         boxSquadre1.innerHTML += `<li><span class="nome-squadre">Nome:  ${nomeSquadre}</span>  <span class="punti">Punti fatti:  ${squadre[i].puntiFatti}</span>  <span class="falli">Falli subiti:  ${squadre[i].falliSubiti}</span></li>`;
 
-        boxSquadre2.innerHTML += `<li><span class="nome-squadre">Nome:  ${nomeSquadre}</span>  Falli subiti:  ${squadre[i].falliSubiti}</span></li>`;
+        boxSquadre2.innerHTML += `<li><span class="nome-squadre">Nome:  ${nomeSquadre}</span>  <span class="falli">Falli subiti:  ${squadre[i].falliSubiti}</span></li>`;
 
      }
 
