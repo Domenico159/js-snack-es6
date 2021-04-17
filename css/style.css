@@ -87,3 +87,20 @@ h2{
 .snack3 #user-fruit h3{
     color: rgb(243, 50, 82);
 }
+
+.snack4 ul{
+    margin: 20px 0px;
+    list-style: none;
+}
+
+.snack4 ul li{
+    text-transform: capitalize;
+}
+
+#collezione1{
+    color: blue;
+}
+
+#collezione2{
+    color: rgb(187, 2, 233);
+}

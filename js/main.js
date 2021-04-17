@@ -224,8 +224,91 @@ newFrutti.forEach((element) => {
 // Dato un'array con dei capi d'abbigliamento - oggetti che contengono informazioni su nome modello, tipologia e colore - si aggiunga a ciascun elemento una ulteriore proprietà che indichi il costo del prodotto.
 // Per inserire il costo del singolo prodotto si scriva una funzione che generi un numero random da 10 a 50 (potete sfruttare il map per aggiungere la nuova proprietà)
 
-     
 
+const box4 =document.getElementById('collezione1') ;
+
+const box4New = document.getElementById('collezione2');
+     
+const abbigliamenti = [
+    {
+
+        nomeModello:'jack',
+        tipologia:'jeans',
+        colore:'blue',
+
+    },
+    {
+
+        nomeModello:'smile',
+        tipologia:'cravatta',
+        colore:'red',
+
+    },
+    {
+
+        nomeModello:'luis',
+        tipologia:'giacca',
+        colore:'black',
+
+    },
+    {
+
+        nomeModello:'privit',
+        tipologia:'cappello',
+        colore:'yellow',
+
+    },
+    {
+
+        nomeModello:'boolean',
+        tipologia:'maglietta',
+        colore:'white',
+
+    },
+];
+
+
+
+
+// console.log(numeroRandom);
+
+const newCollections = abbigliamenti.map((element,index) => {
+    let numeroRandom =numeriRandom(10 , 50);
+
+    let newAbbigliamento = {
+        ...element,
+        prezzo:numeroRandom,
+    } 
+
+    return newAbbigliamento
+
+});
+
+console.table(newCollections);
+
+
+abbigliamenti.forEach( (element,index) =>{
+
+    box4.innerHTML += `<li>${element.nomeModello},   ${element.tipologia},   ${element.colore}</li>  `;
+
+} );
+
+
+newCollections.forEach((element,index) =>{
+    box4New.innerHTML += `   <li>   ${element.nomeModello},   ${element.tipologia},   ${element.colore},  ${element.prezzo} €</li>  `;
+});
+
+
+
+
+
+// Funcion **************************
+
+function numeriRandom (min,max){
+
+    return Math.floor( Math.random()* (max -min +1) + min );
+
+};
 
      
 
