@@ -15,6 +15,7 @@ main{
     background: cadetblue;
     min-height: 100vh;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 section{
@@ -25,6 +26,7 @@ section{
     background: #fff;
     border-radius: 20px;
     box-shadow: 0 10px 10px -10px #000;
+    margin-bottom: 50px;
 }
 
 section > div{
@@ -75,4 +77,13 @@ h2{
 
 .snack2 ul li .falli{
     color: red;
+}
+
+
+.snack3 #box3 h3{
+    color: blue;
+}
+
+.snack3 #user-fruit h3{
+    color: rgb(243, 50, 82);
 }

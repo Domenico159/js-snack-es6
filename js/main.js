@@ -153,7 +153,76 @@ const squadre2 =[];
      console.log('************************* squadre 2 **********************************');
 
      console.table(squadre2);
+     
 
+
+//      jsnack 3
+// Si scriva una funzione che accetti tre argomenti, un array e due numeri (a più piccolo di b).
+// La funzione ritornerà un nuovo array con i valori che hanno la posizione compresa tra i due numeri
+// inseriti dall'utente (è possibile usare, ad esempio, for/foreach/filter
+
+const frutti = ['fragola','banana','mela','kiwi','mango','papaya'];
+
+const box3 =document.getElementById('box3');
+
+const userFruit =document.getElementById('user-fruit') ;
+
+let min = parseInt(prompt(`Inserisci un numero da 0 a ${frutti.length}`)) ;
+
+while(isNaN(min) || (min > frutti.length  || min < 0)){
+    min = parseInt(prompt(`Numero errato per favore inserire un numero da 0 a ${frutti.length}`)) ;
+}
+
+let max =parseInt(prompt(`Inserisci un numero da ${min} a ${frutti.length}`)) ;
+
+while(isNaN(min) || (min > max  || max > frutti.length)){
+    max =parseInt(prompt(`Numero errato per favore inserire un numero da ${min} a ${frutti.length}`)) ;
+}
+
+
+const newFrutti = frutti.filter((element , index) => {
+
+    if(index >= min && index <= max ){
+
+        return element;
+
+    }
+
+});
+
+frutti.forEach((element) => {
+
+    box3.innerHTML += `<h3> ${element}</h3>  `;
+
+});
+
+newFrutti.forEach((element) => {
+
+    userFruit.innerHTML += `<h3> ${element}</h3>  `;
+
+});
+
+
+// console.log(frutti);
+
+// console.log(newFrutti);
+
+
+// console.log(min);
+
+// console.log(max);
+
+
+
+
+
+
+
+
+
+// jsnack 4
+// Dato un'array con dei capi d'abbigliamento - oggetti che contengono informazioni su nome modello, tipologia e colore - si aggiunga a ciascun elemento una ulteriore proprietà che indichi il costo del prodotto.
+// Per inserire il costo del singolo prodotto si scriva una funzione che generi un numero random da 10 a 50 (potete sfruttare il map per aggiungere la nuova proprietà)
 
      
 
